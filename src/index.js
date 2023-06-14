@@ -2,16 +2,25 @@ import './style.css';
 
 const tasks = [
   {
-    description: 'Wash the dishes',
+    description: 'Pay the bills',
     completed: true,
     index: 0,
   },
   {
-    description: 'Complete To Do list',
+    description: 'Pick up the kids',
     completed: true,
     index: 1,
   },
-
+  {
+    description: 'Write some code',
+    completed: true,
+    index: 2,
+  },
+  {
+    description: 'Drink coffee',
+    completed: true,
+    index: 3,
+  },
 ];
 
 const loadTask = (arr) => {
