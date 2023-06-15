@@ -1,64 +1,136 @@
-* {
-  box-sizing: border-box;
+/* styling of the to do list project */
+
+/* body styles */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: beige;
 }
 
-.to-do-container {
-  width: 45%;
-  margin: 10% 27.5%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+h1 {
+  text-align: center;
 }
 
-.title-and-refresh {
-  display: flex;
-  margin-left: 40px;
-}
+/* todo tasks form and buttons */
 
-.input_and_add {
-  display: flex;
-  width: 90%;
-}
-
-form {
-  display: block;
-  width: 100%;
-}
-
-.input-task {
-  width: 75%;
-  padding: 9px;
-  margin: 20px 0;
-  margin-left: 40px;
-}
-
-.add {
-  width: 10%;
-  height: 35px;
-  margin-top: 20px;
-  background-color: white;
-  border: 1px solid gray;
-}
-
-.clearButton {
-  width: 100%;
-  padding: 10px;
-  background-color: rgb(207, 207, 207);
-  color: gray;
-  font-weight: bold;
-  border: 0;
+#reset:hover {
   cursor: pointer;
 }
 
-.clearButton:active {
-  opacity: 0.8;
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* todays container style  */
+
+.today-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+}
+
+/* input button */
+
+.inputBtn {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+/* text fields input styles */
+
+form input[type='text'] {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#task-input {
+  width: 80%;
+}
+
+/* submit button */
+
+form button[type='submit'] {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: lightgrey;
+  color: rgba(51, 49, 49, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* list container and list items styles */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 80%;
 }
 
 li {
-  list-style-type: none;
   display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid grey;
 }
 
-.task-to-be-done {
-  margin-left: 25px;
-  font-size: 17px;
-  font-family: 'Courier New', Courier, monospace;
+li input[type='checkbox'] {
+  margin-right: 12px;
+}
+
+li span {
+  margin-right: 12px;
+  flex: 1;
+}
+
+li button.delete-btn {
+  background-color: beige;
+  color: darkgrey;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+/* Clear Completed Button styles */
+
+#clear-completed {
+  width: 40%;
+  height: 3em;
+  background-color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: -1rem;
+  border-radius: 4px;
+}
+
+#clear-completed:hover {
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  background-color: rgba(243, 37, 37, 0.8);
+  color: #fff;
+}
+
+.clear-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* checkbox checked styles */
+
+.checked {
+  text-decoration: line-through;
 }
