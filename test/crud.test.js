@@ -26,16 +26,6 @@ const localStorage = (() => {
     },
   };
 })();
-// Object.defineProperty(window, 'localStorage', { value: localStorage });
-
-// Mock the Todo class
-class Todo {
-  constructor(description, completed, index) {
-    this.description = description;
-    this.completed = completed;
-    this.index = index;
-  }
-}
 
 // Mock the Todos class
 class Todos {
@@ -43,7 +33,12 @@ class Todos {
     this.todos = [];
   }
 
-  add(todo) {
+  add(description, completed, index) {
+    const todo = {
+      description,
+      completed,
+      index,
+    };
     this.todos.push(todo);
   }
 
@@ -64,14 +59,13 @@ class Todos {
       this.todos = [...this.todos, ...todos];
     }
   }
-
 }
 
 describe('todoCrud', () => {
   describe('addTodo', () => {
     it('adds a new todo to the list', () => {
       const todos = new Todos();
-      addTodo(Todo, todos, 'Test todo');
+      addTodo(todos, 'Test todo');
       expect(todos.todos.length).toBe(1);
       expect(todos.todos[0].description).toBe('Test todo');
       expect(todos.todos[0].completed).toBe(false);
@@ -79,7 +73,7 @@ describe('todoCrud', () => {
 
     it('saves the new todo to localStorage', () => {
       const todos = new Todos();
-      addTodo(Todo, todos, 'Test todo');
+      addTodo(todos, 'Test todo');
       expect(localStorage.getItem('todos')).toBeTruthy();
       expect(JSON.parse(localStorage.getItem('todos')).length).toBe(1);
       expect(JSON.parse(localStorage.getItem('todos'))[0].description).toBe('Test todo');

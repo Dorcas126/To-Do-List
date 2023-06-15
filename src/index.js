@@ -18,14 +18,6 @@ const showTrash = (index) => {
   trash.classList.remove('hidden');
 };
 
-class Todo {
-  constructor(decription, completed, index) {
-    this.decription = decription;
-    this.completed = completed;
-    this.index = index;
-  }
-}
-
 class Todos {
   constructor() {
     this.todos = [];
@@ -118,7 +110,7 @@ clearBtn.addEventListener('click', () => {
 todoForm.addEventListener('submit', (e) => {
   e.preventDefault();
   if (input.value !== '') {
-    addTodo(Todo, todos, input.value);
+    addTodo(todos, input.value);
     input.value = '';
   }
 });
