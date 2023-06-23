@@ -73,6 +73,12 @@ In this project, you will build a simple HTML list of To Do tasks. The list will
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Live Demo 
+
+- [Live Demo Link](https://dorcas126.github.io/To-Do-List/dist/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started 
@@ -124,8 +130,8 @@ Linters
 - Twitter: [@Dorcasuw](https://twitter.com/Dorcasuwi)
 - LinkedIn: [Uwimbabazi Dorcas](https://www.linkedin.com/in/uwimbabazi-dorcas-956a5a226/)
 
-👤 **Eloghene Otiede**
 
+👤 **Eloghene Otiede**
 - GitHub: [@geekelo](https://github.com/geekelo)
 - Twitter: [@Geekelo_xyz](https://twitter.com/Geekelo_xyz)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/eloghene-otiede)
